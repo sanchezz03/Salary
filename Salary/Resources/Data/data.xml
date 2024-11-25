@@ -1,0 +1,18 @@
+﻿<Scientists>
+	<Scientist id="1" type="FullTime">
+		<FullName>John Doe</FullName>
+		<Faculty>Engineering</Faculty>
+		<Department>Mechanical</Department>
+		<Position>Professor</Position>
+		<Salary>1200.50</Salary>
+		<YearsOnPosition>5</YearsOnPosition>
+	</Scientist>
+	<Scientist id="2">
+		<FullName>Jane Smith</FullName>
+		<Faculty>Science</Faculty>
+		<Department>Physics</Department>
+		<Position>Assistant Professor</Position>
+		<Salary>1000.00</Salary>
+		<YearsOnPosition>3</YearsOnPosition>
+	</Scientist>
+</Scientists>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salary.MainPage"
+             xmlns:viewmodel="clr-namespace:Salary.ViewModel"
+             x:DataType="viewmodel:MainViewModel">
+    
+    <StackLayout Padding="20">
+        <Label Text="XML Processor" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry Placeholder="Enter the search value"
+          Text="{Binding SearchValue}"
+          Margin="10"/>
+        
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Load Xml File" 
+                    Command="{Binding LoadXmlFileCommand}" />
+            <Button Text="Process with SAX" 
+                    Command="{Binding ProcessWithSaxCommand}" />
+            <Button Text="Process with Dom" 
+                    Command="{Binding ProcessWithDomCommand}" />
+            <Button Text="Process with Linq" 
+                    Command="{Binding ProcessWithLinqCommand}" />
+            <Button Text="Clear"  
+                    Command="{Binding ClearCommand}" />
+        </HorizontalStackLayout>
+
+
+        <WebView 
+              x:Name="FileWebView" 
+              HeightRequest="150"
+              HorizontalOptions="FillAndExpand">
+            <WebView.Source>
+                <HtmlWebViewSource Html="{Binding HtmlOutput}" />
+            </WebView.Source>
+        </WebView>
+    </StackLayout>
+
+</ContentPage>
